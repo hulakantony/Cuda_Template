@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900');
+@import 'circles';
+$headerColor: #864f9c;
+$servicesColor: #16c2a3;
+$teamColor: #e7f1f8;
+$portfolioColor: #fd9;
+$reviewsColor: #d74580; 
+$Tittilium: 'Titillium Web', sans-serif;
+html { 
+ box-sizing: border-box; 
+ font-size: 14px;
+ &::before, &::after{
+  box-sizing: inherit;
+ } 
+*{
+  box-sizing: border-box;
+}
+h2{
+  font: 700 40px/1 $Tittilium;
+  text-transform: uppercase;
+}
+h3{
+  font: 700 24px/1 $Tittilium;
+  text-transform: uppercase;
+}
+h4{
+  font: 400 18px/1 $Tittilium;
+  text-transform: uppercase;
+}
+.description{
+  font: normal 18px/1.44444 $Tittilium;
+}
+}
+.content-wrap{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#header{
+  background: $headerColor;
+  padding: 56px 0 145px 0; 
+  text-align: center;
+  h1{
+    text-align: center;
+    color: #f7f2ea;
+    font: 700 40px/1.2 $Tittilium;
+    margin: 0 auto 55px auto;
+    display: block;
+  } 
+}
+.logo-menu-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 60px;
+  margin: 0 0 130px 0;
+  .logo{
+    text-indent: -99999px;
+    overflow: hidden;
+    width: 125px;
+    height: 40px;
+    background: url(../images/logo.png) no-repeat;
+    display: block;
+  }
+  .main-nav{
+    font-size: 0;
+    a{
+      color: #fff;
+      display: inline-block;
+      text-decoration: none;
+      padding: 9px 18px;
+      border-radius: 4px;
+      font: normal 16px/1 $Tittilium;
+      margin: 0 0 0 10px;
+      &.active{
+        background: #633a79;
+      }
+      &:hover:not(.active){
+        background: #ccc;
+      }
+    }
+  }
+}
+.work-with-us-but{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 25px 85px 20px 85px;
+  background: #eb7d4b;
+  border-radius: 4px;
+  border-bottom: 4px solid #c86a40;
+  font: 700 16px/1 $Tittilium;
+  &:hover{
+    background: #af5831;
+  }
+}
+.services-wrap{
+  padding: 115px 0 125px 0;
+  background: $servicesColor;
+  text-align: center;
+  h2{
+    color: #fff;
+    margin: 0 0 30px 0; 
+    padding: 0 20px; 
+    &::after{
+      content: '';    
+      margin: 0 auto;
+      width: 87px;
+      height: 4px;
+      display: block;
+      background: rgba(0,0,0,.15);
+      position: relative;
+      top: 15px;
+    }
+  }
+  .description{
+    color: #fff;    
+    max-width: 605px;
+    margin: 0 auto 75px auto;
+  }
+}
+.services-items-wrap{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .service{
+    flex-basis: 260px;
+  }
+  .img-wrap{
+    margin: 0 0 50px 0;
+    img{
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+  h3{
+    color: #fff;
+    margin: 0 0 25px 0;
+  }
+  p{
+    font: normal 16px/1.5 $Tittilium;
+    color: #fff;
+    margin: 0;
+    padding: 0 30px;
+  }
+}
+.our-team-wrap{
+  background: $teamColor;
+  padding: 115px 0 125px 0;
+  text-align: center;
+  color: #3c4660;
+  h2{    
+    margin: 0 0 30px 0; 
+    padding: 0 20px; 
+    &::after{
+      content: '';    
+      margin: 0 auto;
+      width: 87px;
+      height: 4px;
+      display: block;
+      background: rgba(0,0,0,.15);
+      position: relative;
+      top: 15px;
+    }
+  }
+  .description{
+    color: #3c4660;
+    margin: 0 0 80px 0;
+  }
+}
+.our-team-persons-wrap{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .team-person{
+    flex-basis: 260px;
+  }
+  .img-wrap{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #878787;
+    margin: 0 auto 40px auto;
+  }
+  h3{
+    margin: 0 0 15px 0;
+    color: #27283d;
+  }
+  .position{
+    color: #30b9e6;
+    font: normal 16px/1 $Tittilium;
+    margin: 0 0 25px 0;
+  }
+  p{
+    font: normal 16px/1.5 $Tittilium;
+    color: #3b4761; ;
+    margin: 0 0 30px 0;
+    padding: 0 30px;
+  }
+  .person-social{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    margin: 0 -12px 0 0;
+    overflow: hidden;
+    li{
+      display: inline-block;
+      margin: 0 12px 0 0;
+      a{
+        width: 32px;
+        height: 32px;
+        background: url(../images/social_sprite.png) no-repeat;
+        display: block;
+
+        &.fb{
+          background-position: 0 0;
+        }
+        &.tw{
+          background-position: -32px 0;
+        }
+        &.in{
+          background-position: -64px 0;
+        }
+        &.mail{
+          background-position: -96px 0;
+        }
+      }
+    }
+  }
+}
+.skills-wrap{
+  padding: 110px 0 125px 0;
+  text-align: center;
+  color: #3b4761;
+  background: #fff;
+  h2{
+    margin: 0 0 30px 0; 
+    padding: 0 20px; 
+    &::after{
+      content: '';    
+      margin: 0 auto;
+      width: 87px;
+      height: 4px;
+      display: block;
+      background: rgba(0,0,0,.15);
+      position: relative;
+      top: 15px;
+    }
+  }
+  .description{
+    max-width: 580px;
+    margin: 0 auto 80px auto;
+  }
+}
+.our-skills-percent-wrap{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .skill{
+    flex-basis: 260px;
+    .c100{
+      margin: 0 auto 30px auto;
+    }
+  }
+  h3{
+    margin: 0;
+  }
+}
+.portfolio-wrap{
+  padding: 115px 0 110px 0;
+  background: $portfolioColor;
+  text-align: center;
+  color: #393939;
+  h2{
+    margin: 0 0 30px 0; 
+    padding: 0 20px; 
+    &::after{
+      content: '';    
+      margin: 0 auto;
+      width: 87px;
+      height: 4px;
+      display: block;
+      background: rgba(0,0,0,.15);
+      position: relative;
+      top: 15px;
+    }
+  }
+  .description{
+    max-width: 540px;
+    margin: 0 auto 40px auto;
+  }
+  .portfolio-switchers{
+    margin: 0 auto 60px auto;
+    font-size: 0;
+    .switcher{
+      display: inline-block;
+      margin: 0 10px 0 0;
+      text-decoration: none;
+      font: normal 18px/1 $Tittilium;
+      color: #393939;
+      text-transform: uppercase;
+      padding: 12px 27px;
+      border-radius: 4px;
+      background: #ebc985;
+      &:last-child{
+        margin-right: 0;
+      }
+      &.active{
+        background: #fff;
+      }
+      &:hover:not(.active){
+        background: #c5a566;
+      }
+    }
+  }
+}
+.portfolio-items-wrap{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0 0 18px 0;
+  .portfolio-item{
+    flex-basis: 540px;
+    margin: 0 0 65px 0;
+    a{
+      width: 100%;
+      display: block;
+      margin: 0 0 25px 0;
+      img{
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+    h4{
+      margin: 0;
+    }
+  }  
+}
+.lead-more-projects-but{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 25px 58px 20px 58px;
+  background: #17c2a4;
+  border-radius: 4px;
+  border-bottom: 4px solid #14a58c;
+  font: 700 16px/1 $Tittilium;
+  &:hover{
+    background: #229783;
+  }
+}
+.reviews-holder{
+  padding: 115px 0 130px 0;
+  background: $reviewsColor;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #2a7b96;
+  h2{
+    margin: 0 0 30px 0; 
+    padding: 0 20px; 
+      &::after{
+      content: '';    
+      margin: 0 auto;
+      width: 87px;
+      height: 4px;
+      display: block;
+      background: rgba(0,0,0,.15);
+      position: relative;
+      top: 15px;
+    }
+  }
+  .description{
+    margin: 0 0 60px 0;
+  }
+}
+.reviews-wrap{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: space-between;
+  padding: 0 20px;
+  min-height: 480px;
+  .review{
+    flex-basis: 515px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    .img-wrap{
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #777;
+    }
+    .comment-wrap{
+      flex-basis: 355px;
+      .comment{
+        padding: 0;
+        margin: 0 0 20px 0;
+        font: italic 400 18px/1.7777 $Tittilium; 
+      }
+      .author{
+        font: 700 24px/1 $Tittilium;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+      }
+      .position{
+        font: 400 18px/1 $Tittilium;
+        margin: 0;
+        color: #fd9;
+      }
+    }
+  }
+}
+.footer-top{
+  padding: 115px 0;
+  color: #fff;
+  text-align: center;
+  background: #3c5399;
+  h2{
+    margin: 0 0 30px 0; 
+    padding: 0 20px; 
+    &::after{
+      content: '';    
+      margin: 0 auto;
+      width: 87px;
+      height: 4px;
+      display: block;
+      background: rgba(0,0,0,.15);
+      position: relative;
+      top: 15px;
+    }
+  }
+  .description{
+    margin: 0 0 75px 0;
+  }
+}
+.contact-form{
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;  
+  padding: 0 140px;
+  height: 290px;
+  align-content: space-between;
+  margin: 0 0 60px 0;
+  .inputs-wrap{
+    flex-basis: 860px;
+    display: flex;
+    justify-content: space-between;
+  }
+  input[type="text"]{
+    height: 56px;
+    flex-basis: 415px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background: #273971;
+    padding: 0 20px 0 0;
+    flex-shrink: 1;
+    //flex-grow: 1;
+    &[placeholder]{
+      color: #fff;
+      padding: 0 0 0 20px;
+    }
+  }
+  textarea{
+    flex-basis: 860px;
+    height: 200px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background: #273971;
+    padding: 0 20px 0 0;
+    &[placeholder]{
+      color: #fff;
+      padding: 20px 0 0 20px;
+    }
+  }
+}
+.send-message-but{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 25px 84px 20px 84px;
+  background: #2fb9e7;
+  border-radius: 4px;
+  border-bottom: 4px solid #299ec5;
+  font: 700 16px/1 $Tittilium;
+  text-transform: uppercase;
+  &:hover{
+    background: #2a7b96;
+  }
+}
+.footer-bottom{
+  padding: 45px 0;
+  background: #334b8e; 
+  color: #fff;
+  text-align: center;
+  .footer-social{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8.7719%;
+    a{
+      font: 700 24px/1 $Tittilium;
+      text-decoration: none;
+      color: #fff;
+     // margin-right: 55px;
+      &:hover{
+        color: #30bae7;
+      }
+    }
+  }
+}
