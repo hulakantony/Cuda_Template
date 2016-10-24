@@ -35,6 +35,14 @@ h4{
 .description{
   font: normal 18px/1.44444 $Tittilium;
 }
+.placeholder{
+  color: #fff;
+  padding: 0 0 0 20px;
+  &::after{
+    content: "*";
+    color: #ff4444;
+  }
+}
 .content-wrap{
   max-width: 1180px;
   margin: 0 auto;
@@ -498,7 +506,39 @@ h4{
     &[placeholder]{
       color: #fff;
       padding: 0 0 0 20px;
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
     }
+    &::-webkit-input-placeholder{
+      color: #fff;      
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    &::-moz-placeholder{
+      color: #fff;     
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    &:-moz-placeholder {
+      color: #fff;      
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    &:-ms-input-placeholder{
+      color: #fff;     
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    } 
   }
   textarea{
     width: 100%;
@@ -509,10 +549,44 @@ h4{
     background: #273971;
     padding: 0 20px 0 0;
     margin: 0 0 60px 0;
+    //resize: none;
     &[placeholder]{
       color: #fff;
       padding: 20px 0 0 20px;
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
     }
+    &::-webkit-input-placeholder{
+      color: #fff;            
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    &::-moz-placeholder{
+      color: #fff;        
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    &:-moz-placeholder {
+      color: #fff;         
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    &:-ms-input-placeholder{
+      color: #fff;       
+      &::after{
+        content: '*';
+        color: #ff4444;
+      }
+    }
+    
   }
   .send-message-but{
     text-decoration: none;
