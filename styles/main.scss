@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900');
 @import 'circles';
 $headerColor: #864f9c;
 $servicesColor: #16c2a3;
@@ -9,11 +9,16 @@ $Tittilium: 'Titillium Web', sans-serif;
 html { 
  box-sizing: border-box; 
  font-size: 14px;
+ min-width: 340px;
  &::before, &::after{
   box-sizing: inherit;
  } 
 *{
   box-sizing: border-box;
+}
+}
+h1{
+  font: 700 40px/1.2 $Tittilium;
 }
 h2{
   font: 700 40px/1 $Tittilium;
@@ -30,7 +35,6 @@ h4{
 .description{
   font: normal 18px/1.44444 $Tittilium;
 }
-}
 .content-wrap{
   max-width: 1180px;
   margin: 0 auto;
@@ -42,10 +46,10 @@ h4{
   text-align: center;
   h1{
     text-align: center;
-    color: #f7f2ea;
-    font: 700 40px/1.2 $Tittilium;
+    color: #f7f2ea;    
     margin: 0 auto 55px auto;
     display: block;
+    width: 76.5%
   } 
 }
 .logo-menu-wrap{
@@ -62,11 +66,12 @@ h4{
     background: url(../images/logo.png) no-repeat;
     display: block;
   }
-  .main-nav{
-    font-size: 0;
+  .main-nav{    
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0 -10px;
     a{
-      color: #fff;
-      display: inline-block;
+      color: #fff;      
       text-decoration: none;
       padding: 9px 18px;
       border-radius: 4px;
@@ -122,10 +127,10 @@ h4{
 .services-items-wrap{
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: baseline;
   .service{
-    flex-basis: 260px;
+    width: 260px;
   }
   .img-wrap{
     margin: 0 0 50px 0;
@@ -149,7 +154,7 @@ h4{
   background: $teamColor;
   padding: 115px 0 125px 0;
   text-align: center;
-  color: #3c4660;
+  color: #3c4660;  
   h2{    
     margin: 0 0 30px 0; 
     padding: 0 20px; 
@@ -172,10 +177,10 @@ h4{
 .our-team-persons-wrap{
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: baseline;
   .team-person{
-    flex-basis: 260px;
+    width: 260px;
   }
   .img-wrap{
     width: 200px;
@@ -184,9 +189,16 @@ h4{
     background: #878787;
     margin: 0 auto 40px auto;
   }
+
   h3{
-    margin: 0 0 15px 0;
-    color: #27283d;
+    margin: 0 0 15px 0;    
+    a{
+      text-decoration: none; 
+      color: #27283d;
+      &:hover{
+        color: #505c79;
+      }
+    }
   }
   .position{
     color: #30b9e6;
@@ -214,6 +226,10 @@ h4{
         height: 32px;
         background: url(../images/social_sprite.png) no-repeat;
         display: block;
+        border-radius: 50%;
+        &:hover{
+          border: 1px solid #9cafbc;
+        }
 
         &.fb{
           background-position: 0 0;
@@ -258,10 +274,10 @@ h4{
 .our-skills-percent-wrap{
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   align-items: baseline;
   .skill{
-    flex-basis: 260px;
+    width: 260px;
     .c100{
       margin: 0 auto 30px auto;
     }
@@ -295,10 +311,10 @@ h4{
   }
   .portfolio-switchers{
     margin: 0 auto 60px auto;
-    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
     .switcher{
-      display: inline-block;
-      margin: 0 10px 0 0;
       text-decoration: none;
       font: normal 18px/1 $Tittilium;
       color: #393939;
@@ -325,7 +341,7 @@ h4{
   align-items: baseline;
   margin: 0 0 18px 0;
   .portfolio-item{
-    flex-basis: 540px;
+    width: 47.3684%;
     margin: 0 0 65px 0;
     a{
       width: 100%;
@@ -339,10 +355,17 @@ h4{
     }
     h4{
       margin: 0;
+      a{
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+          color: #817d7d;
+        }
+      }
     }
   }  
 }
-.lead-more-projects-but{
+.load-more-projects-but{
   text-decoration: none;
   color: #fff;
   display: inline-block;
@@ -359,8 +382,7 @@ h4{
   padding: 115px 0 130px 0;
   background: $reviewsColor;
   text-align: center;
-  color: #fff;
-  border-bottom: 1px solid #2a7b96;
+  color: #fff;  
   h2{
     margin: 0 0 30px 0; 
     padding: 0 20px; 
@@ -386,13 +408,14 @@ h4{
   align-content: space-between;
   align-items: space-between;
   padding: 0 20px;
-  min-height: 480px;
-  .review{
-    flex-basis: 515px;
+  margin: 0 0 -140px 0; 
+  .review{   
+    width: 45.2%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
+    margin: 0 0 140px 0;
     .img-wrap{
       width: 96px;
       height: 96px;
@@ -400,7 +423,8 @@ h4{
       background: #777;
     }
     .comment-wrap{
-      flex-basis: 355px;
+      width: 65%;
+      padding: 0 0 0 45px;
       .comment{
         padding: 0;
         margin: 0 0 20px 0;
@@ -410,6 +434,11 @@ h4{
         font: 700 24px/1 $Tittilium;
         margin: 0 0 10px 0;
         text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+          color: #8f8888;
+        }
       }
       .position{
         font: 400 18px/1 $Tittilium;
@@ -424,6 +453,7 @@ h4{
   color: #fff;
   text-align: center;
   background: #3c5399;
+  border-bottom: 1px solid #2a7b96;
   h2{
     margin: 0 0 30px 0; 
     padding: 0 20px; 
@@ -446,45 +476,45 @@ h4{
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;  
-  padding: 0 140px;
-  height: 290px;
-  align-content: space-between;
-  margin: 0 0 60px 0;
+  padding: 0 12.28%;  
+  align-content: space-between;  
   .inputs-wrap{
-    flex-basis: 860px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 0 0 27px 0;
   }
   input[type="text"]{
     height: 56px;
-    flex-basis: 415px;
+    width: 48.25%;
     border-radius: 4px;
     border: none;
     outline: none;
     background: #273971;
-    padding: 0 20px 0 0;
-    flex-shrink: 1;
-    //flex-grow: 1;
+    padding: 0 20px 0 0;       
+    &:first-child{
+      margin: 0 32px 0 0;
+    }
     &[placeholder]{
       color: #fff;
       padding: 0 0 0 20px;
     }
   }
   textarea{
-    flex-basis: 860px;
+    width: 100%;
     height: 200px;
     border-radius: 4px;
     border: none;
     outline: none;
     background: #273971;
     padding: 0 20px 0 0;
+    margin: 0 0 60px 0;
     &[placeholder]{
       color: #fff;
       padding: 20px 0 0 20px;
     }
   }
-}
-.send-message-but{
+  .send-message-but{
   text-decoration: none;
   color: #fff;
   display: inline-block;
@@ -492,11 +522,14 @@ h4{
   background: #2fb9e7;
   border-radius: 4px;
   border-bottom: 4px solid #299ec5;
+  margin: 0 auto;
   font: 700 16px/1 $Tittilium;
   text-transform: uppercase;
   &:hover{
     background: #2a7b96;
   }
+}
+
 }
 .footer-bottom{
   padding: 45px 0;
@@ -508,13 +541,322 @@ h4{
     justify-content: space-between;
     padding: 0 8.7719%;
     a{
-      font: 700 24px/1 $Tittilium;
+      font: 600 24px/1 $Tittilium;
       text-decoration: none;
-      color: #fff;
-     // margin-right: 55px;
+      color: #fff;     
       &:hover{
         color: #30bae7;
       }
     }
   }
 }
+@media screen and (max-width: 1023px){
+  h1{
+      font: 700 32px/1.2 $Tittilium;
+  }
+  h2{
+    font: 700 32px/1 $Tittilium;
+  }
+  h3{
+   font: 700 20px/1 $Tittilium;
+   text-transform: uppercase;
+  }
+  h4{
+    font: 400 16px/1 $Tittilium;
+    text-transform: uppercase;
+  }
+  .description{
+    font: normal 16px/1.44444 $Tittilium;
+  }
+  #header{
+    padding: 56px 0 120px 0;    
+    .work-with-us-but{
+      padding: 25px 70px 20px 70px;
+    }
+  }
+  .services-wrap{
+     padding: 90px 0 100px 0;
+     .services-items-wrap{
+      flex-wrap: wrap;
+      margin: 0 0 -50px 0;
+      .service{
+        width: 45%;
+        margin: 0 0 50px 0;
+      }
+     }
+  }
+  .our-team-wrap{
+    padding: 95px 0 100px 0;
+    .our-team-persons-wrap{
+      flex-wrap: wrap;
+      margin: 0 0 -50px 0;
+      .team-person{
+        width: 45%;
+        margin: 0 0 50px 0;
+      }
+    }
+  }
+  .skills-wrap{
+    padding: 90px 0 100px 0;
+    .description{
+      margin: 0 auto 40px auto;
+    }
+    .our-skills-percent-wrap{
+      flex-wrap: wrap;
+      margin: 0 0 -50px 0;
+      .skill{
+        width: 45%;
+        margin: 0 0 50px 0;
+      }
+    }
+  }
+  .portfolio-wrap{
+    padding: 100px 0 90px 0;
+    .portfolio-items-wrap{
+      flex-direction: column;
+      align-items: center;
+      .portfolio-item{
+        width: 70%;
+      }
+    }
+  }
+  .reviews-holder{ 
+    padding: 90px 0 100px 0;
+    .reviews-wrap{
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 -50px 0;
+      .review{
+        width: 70%;
+        margin: 0 0 50px 0;
+        .img-wrap{
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+  }
+  .footer-top{
+    padding: 90px 0;
+  }
+  .footer-bottom{ 
+    .footer-social{
+      a{
+        font: 600 18px/1 $Tittilium;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  h1{
+    font: 700 26px/1.2 $Tittilium;
+  }
+  #header{
+    padding: 56px 0 100px 0 
+  }
+  .logo-menu-wrap{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 70px 0;
+    padding: 0;
+    .logo{
+      margin: 0 0 50px 0;
+    }
+    .main-nav{
+      a{
+       padding: 8px 15px;
+      }
+    }
+  }
+  .services-wrap{
+    padding: 70px 0;
+    .description{
+      margin: 0 auto 50px auto;
+    }
+  }
+  .our-team-wrap{
+    padding: 80px 0 85px 0; 
+    .img-wrap{
+      width: 150px;
+      height: 150px;
+    }
+    .description {
+      margin: 0 auto 50px auto;
+    }  
+  }
+  .skills-wrap{
+    padding: 70px 0;
+  }
+  .portfolio-wrap{
+    padding: 70px 0;
+  }
+  .reviews-holder{
+    padding: 70px 0;
+    .reviews-wrap{      
+      .review{
+       width: 100%; 
+       justify-content: space-around;     
+      }
+    }    
+  }
+  .footer-top{
+    padding: 70px 0;
+    .description{
+      width: 80%;
+      margin: 0 auto 50px auto;
+    }
+    .contact-form{
+      padding: 0 8%;
+    }
+    .inputs-wrap{
+      flex-direction: column;
+      margin: 0;
+      input[type="text"]{
+        width: 100%;
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+  .footer-bottom{
+    padding: 20px 0;
+    .footer-social{
+      padding: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      a{
+        font: 600 22px/1.5 $Tittilium;
+        width: 33.333%
+      }
+    }
+  }
+}
+@media screen and (max-width: 479px){
+  h1{
+    font: 700 26px/1.2 $Tittilium;
+  }
+  h2{
+    font: 700 28px/1 $Tittilium;
+  }
+  h3{
+   font: 700 24px/1 $Tittilium;   
+  }
+  .description{
+    font: normal 14px/1.44444 $Tittilium;
+  }
+  #header{
+    h1{
+      width: 90%;
+    }
+  }
+  .logo-menu-wrap{    
+    margin: 0 0 50px 0;
+    .logo{
+      width: 200px;
+      height: 64px;
+      background-size: contain;
+    }    
+    .main-nav{
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      a{
+       padding: 10px 22px;
+       margin: 0 0 5px 0;
+       font: normal 20px/1 $Tittilium;
+      }
+    }
+  }
+  .services-wrap{     
+    .services-items-wrap{
+      flex-direction: column;
+      align-items: center;
+      .service{
+        width: 100%; 
+        margin: 0 0 60px 0;  
+        .img-wrap{
+          margin: 0 0 20px 0;
+        }   
+        h3{
+          margin: 0 0 20px 0;
+        }  
+      }
+    }
+  }  
+  .our-team-wrap{
+    .our-team-persons-wrap{
+      flex-direction: column;
+      align-items: center;
+      .team-person{
+        width: 100%;
+      }
+    }
+  }
+  .skills-wrap{
+    .our-skills-percent-wrap{
+      flex-direction: column;
+      align-items: center;
+      .skill{
+        width: 100%;
+      }
+    }
+  }
+  .portfolio-wrap{
+    .description{
+      margin: 0 0 30px 0;
+    }
+    .portfolio-switchers{
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto 30px auto;
+      width: 100%;
+      .switcher{
+        margin: 0 0 10px 0;
+        padding: 15px 35px;
+      }
+    }
+    .portfolio-items-wrap{
+      flex-direction: column;
+      align-items: center;
+      .portfolio-item{
+        width: 100%;
+      }
+    }
+  }
+  .load-more-projects-but{
+    padding: 25px 50px 20px 50px;
+  }
+  .reviews-holder{
+    .reviews-wrap{
+      padding: 0;
+      .review{
+        flex-direction: column;
+        align-items: center;
+        .img-wrap{
+          margin: 0 0 30px 0;
+          width: 150px;
+          height: 150px;
+        }
+        .comment-wrap{
+          width: 100%;
+          text-align: center;
+          padding: 0;
+          .author{
+            font: 700 22px/1 $Tittilium;
+          }
+        }
+      }      
+    }
+  }
+  .footer-top{
+    .contact-form{
+      padding: 0;
+    }
+  }
+  .footer-bottom{
+    .footer-social{
+      flex-direction: column;
+      align-items: center;      
+    }
+  }
+}  

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        
   </head>
   <body>
     <div class="main-wrap">
@@ -18,19 +18,19 @@
         <div class="logo-menu-wrap">
             <a href="/" class="logo">Cuda</a>
             <nav class="main-nav">
-              <a class="active" href="#">HOME</a>
-              <a href="#">ABOUT</a>
-              <a href="#">WORK</a>
-              <a href="#">BLOG</a>
-              <a href="#">CONTACT</a>
+              <a class="active" href="/">HOME</a>
+              <a href="#about">ABOUT</a>
+              <a href="#work">WORK</a>
+              <a href="#blog">BLOG</a>
+              <a href="#footer">CONTACT</a>
             </nav>
           </div>
-          <h1>Hi there! We are the new kids on the block <br>
-and we build awesome websites and mobile apps.</h1>
+          <h1>Hi there! We are the new kids on the block and we build awesome websites and mobile apps.</h1>
           <a href="#" class="work-with-us-but">WORK WITH US!</a>
         </div>
       </header>
-      <section class="services-wrap">
+      <main>
+      <section class="services-wrap" id="about">
         <div class="content-wrap">
           <h2>SERVICES WE PROVIDE</h2>
           <p class="description">We are working with both individuals and businesses from all over the globe 
@@ -69,7 +69,7 @@ consectetuer adipiscing elit, sed diam nonummy nibh.</p>
           <div class="our-team-persons-wrap">
             <article class="team-person">
               <div class="img-wrap"><img src="" alt=""></div>
-              <h3>ANNE HATHAWAY</h3>
+              <h3><a href="#">ANNE HATHAWAY</a></h3>
               <p class="position">CEO / Marketing Guru</p>
               <p>Lorem ipsum dolor sit amet, 
 consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
@@ -82,7 +82,7 @@ consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
             </article>
             <article class="team-person">
               <div class="img-wrap"><img src="" alt=""></div>
-              <h3>Kate Upton</h3>
+              <h3><a href="#">Kate Upton</a></h3>
               <p class="position">Creative Director</p>
               <p>Duis aute irure dolor in in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat non diam proident.</p>
               <ul class="person-social">
@@ -93,7 +93,7 @@ consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
             </article>
             <article class="team-person">
               <div class="img-wrap"><img src="" alt=""></div>
-              <h3>Olivia Wilde</h3>
+              <h3><a href="#">Olivia Wilde</a></h3>
               <p class="position">Lead Designer</p>
               <p>Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem nesciunt.</p>
               <ul class="person-social">
@@ -105,7 +105,7 @@ consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
             </article>
             <article class="team-person">
               <div class="img-wrap"><img src="" alt=""></div>
-              <h3>Ashley Greene</h3>
+              <h3><a href="#">Ashley Greene</a></h3>
               <p class="position">SEO / Developer</p>
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
               <ul class="person-social">
@@ -166,7 +166,7 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>          
         </div>
       </section>
-      <section class="portfolio-wrap">
+      <section class="portfolio-wrap" id="work">
         <div class="content-wrap">
           <h2>OUR PORTFOLIO</h2>
           <p class="description">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
@@ -180,25 +180,25 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="portfolio-items-wrap">
             <article class="portfolio-item">
               <a href="#"><img src="images/portfolio_1.png" alt=""></a>
-              <h4>Isometric Perspective Mock-Up</h4>
+              <h4><a href="#">Isometric Perspective Mock-Up</a></h4>
             </article>
             <article class="portfolio-item">
               <a href="#"><img src="images/portfolio_2.png" alt=""></a>
-              <h4>Time Zone App UI</h4>
+              <h4><a href="#">Time Zone App UI</a></h4>
             </article>
             <article class="portfolio-item">
               <a href="#"><img src="images/portfolio_3.png" alt=""></a>
-              <h4>Viro Media Players UI</h4>
+              <h4><a href="#">Viro Media Players UI</a></h4>
             </article>
             <article class="portfolio-item">
               <a href="#"><img src="images/portfolio_4.png" alt=""></a>
-              <h4>Blog / Magazine Flat UI Kit</h4>
+              <h4><a href="#">Blog / Magazine Flat UI Kit</a></h4>
             </article>
           </div>
-          <a href="#" class="lead-more-projects-but">LOAD MORE PROJECTS</a>
+          <a href="#" class="load-more-projects-but">LOAD MORE PROJECTS</a>
         </div>
       </section>
-      <section class="reviews-holder">
+      <section class="reviews-holder" id="blog">
         <div class="content-wrap">
           <h2>WHAT POEPLE SAY ABOUT US</h2>
           <p class="description">Our clients love us!</p>
@@ -207,7 +207,7 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
               <div class="img-wrap"><img src="" alt=""></div>
               <div class="comment-wrap">
                 <blockquote class="comment">“Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla urna eu nisl scelerisque.”</blockquote>
-                <p class="author">Chanel Iman</p>
+                <a class="author" href="#">Chanel Iman</a>
                 <p class="position">CEO of Pinterest</p>
               </div>
             </div>
@@ -215,7 +215,7 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
               <div class="img-wrap"><img src="" alt=""></div>
               <div class="comment-wrap">
                 <blockquote class="comment">“Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.”</blockquote> 
-                <p class="author">ADRIANA LIMA</hp>
+                <a class="author" href="#">ADRIANA LIMA</a>
                 <p class="position">Founder of Instagram</p>
               </div>
             </div>
@@ -223,7 +223,7 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
               <div class="img-wrap"><img src="" alt=""></div>
               <div class="comment-wrap">
                 <blockquote class="comment">“Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.”</blockquote>
-                <p class="author">ANNE HATHAWAY</p>
+                <a class="author" href="#">ANNE HATHAWAY</a>
                 <p class="position">Lead Designer at Behance</p>
               </div>
             </div>
@@ -231,13 +231,14 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
               <div class="img-wrap"><img src="" alt=""></div>
               <div class="comment-wrap">
                 <blockquote class="comment">“Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.”</blockquote>
-                <p class="author">EMMA STONE</p>
+                <a class="author" href="#">EMMA STONE</a>
                 <p class="position">Co-Founder of Shazam</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      </main>
       <footer id="footer">
         <section class="footer-top">
           <div class="content-wrap">
@@ -249,8 +250,8 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
                 <input type="text" placeholder="Your Email">
               </div>
               <textarea name="" placeholder="Your Message"></textarea>
-            </form>
-            <a href="" class="send-message-but">send message</a>
+              <a href="" type="submit" class="send-message-but">send message</a>
+            </form>            
           </div>
         </section>
         <div class="footer-bottom">
@@ -267,10 +268,23 @@ tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
         </div>
       </footer>
-    </div>
+    </div>        
+    <script src="scripts/main.js"></script>   
+    <script>
+      $(document).ready(function(){
+        $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
 
-        
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+          }, 900, 'swing', function () {
+            window.location.hash = target;
+          });
+        });
+      });
+    </script>
   </body>
 </html>
